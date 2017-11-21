@@ -31,13 +31,15 @@ Atualmente o sistema está executando, inserindo e listando Espaços, Blocos e T
 
 Agora que o usuário já pode cadastrar os espaços ele gostaria de fazer uma reserva para uma determinada data e também consultar as reservas.
 
+![Diagrama de Classe](imagens/diagrama_classe_v3.png)
+
 Estude o código existente e adicione a funcionalidade ligadas a Reservar um Espaço.
 Crie então um novo menu Reserva com as opções de nova e listar.
 
 O formulário de reserva deve ter:
 ESPACO (ESPACO_ID)
 TITULO DA RESERVA (TITULO)
-DESCRICAO DA RESERVA (DESCRICAO)
+DESCRIÇÃO DA RESERVA (DESCRICAO)
 JUSTIFICATIVA DA RESERVA (JUSTIFICATIVA)
 SOLICITANTE DA RESERVA (SOLICITANTE)
 TELEFONE DE CONTATO DO SOLICITANTE (TELEFONE)
