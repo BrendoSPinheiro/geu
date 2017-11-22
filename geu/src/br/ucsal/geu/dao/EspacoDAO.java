@@ -32,7 +32,6 @@ public class EspacoDAO {
 				e.setId(rs.getInt("id"));
 				e.setIdentificacao(rs.getString("identificacao"));
 				e.setAndar(rs.getString("andar"));
-				//e.setFuncao(rs.getString("funcao"));
 				
 				Bloco bloco = new Bloco();
 				bloco.setId(rs.getInt("bloco_id"));
@@ -106,6 +105,34 @@ public class EspacoDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public Espaco getByID(int id) {
+		Espaco espaco = null;
+		try {
+			PreparedStatement ps = conexao.getConnection().prepareStatement("select id,identificacao,andar,tipo_id,bloco_id from espacos where id=?");
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+			if(rs.next()) {
+				espaco = new Espaco();
+				espaco.setId(rs.getInt("id"));
+				espaco.setIdentificacao(rs.getString("identificacao"));
+				espaco.setAndar(rs.getString("andar"));
+				
+				Bloco bloco = new Bloco();
+				bloco.setId(rs.getInt("bloco_id"));
+				espaco.setBloco(bloco);
+				
+				Tipo tipo = new Tipo();
+				tipo.setId(rs.getInt("tipo_id"));
+				espaco.setTipo(tipo);
+				
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return espaco;
 	}
 
 }

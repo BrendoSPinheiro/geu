@@ -36,6 +36,16 @@
                 <li><a href="/geu/espacos?q=new">Novo</a></li>
               </ul>
             </li>
+            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reserva <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/geu/reservas">Listar</a></li>
+                <li><a href="/geu/reservas?q=new">Nova</a></li>
+              </ul>
+            </li>
+            
+            
           </ul>
         </div><!--/.nav-collapse -->
       </div>
