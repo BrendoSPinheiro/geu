@@ -1,6 +1,8 @@
 # GEU - GERENCIADOR DE ESPAÇOS UNIVERSITÁRIOS
 
-## VERSÃO AVALIAÇÃO:
+
+
+## VERSÃO AVALIAÇÃO (FINAL) !!
 
 O código apresenta apenas o conteúdo visto na AVI:
 * HTML
