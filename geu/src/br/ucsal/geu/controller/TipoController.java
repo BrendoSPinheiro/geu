@@ -22,26 +22,51 @@ public class TipoController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		
 		String q = request.getParameter("q");
+		
 		if (q != null && q.equals("new")) {
 			request.getRequestDispatcher("tipoform.jsp").forward(request, response);
-		} else {
-			TipoDAO dao = new TipoDAO();
-			request.setAttribute("lista", dao.listar());
-			request.getRequestDispatcher("tipolist.jsp").forward(request, response);
+			return;
 		}
+		
+
+		TipoDAO dao = new TipoDAO();
+
+		if (q != null && q.equals("editar")) {
+			String id = request.getParameter("id");
+			Tipo tipo = dao.getByID(Integer.parseInt(id));
+			request.setAttribute("tipo", tipo);
+			request.getRequestDispatcher("tipoform.jsp").forward(request, response);
+		}
+
+		
+		if (q != null && q.equals("excluir")) {
+				String id = request.getParameter("id");
+				dao.delete(Integer.parseInt(id));
+		}
+		
+		request.setAttribute("lista", dao.listar());
+		request.getRequestDispatcher("tipolist.jsp").forward(request, response);
+		
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		
+		String id = request.getParameter("id");
 		String nome = request.getParameter("nome");
 		String descricao = request.getParameter("descricao");
 		Tipo tipo = new Tipo(nome, descricao);
 		TipoDAO dao = new TipoDAO();
-		dao.inserir(tipo);
+		if(id != null && !id.isEmpty()) {
+			tipo.setId(Integer.parseInt(id));
+			dao.update(tipo);
+		}else {
+			dao.inserir(tipo);
+		}
+		
 
 		request.setAttribute("lista", dao.listar());
 		request.getRequestDispatcher("tipolist.jsp").forward(request, response);

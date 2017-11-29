@@ -18,13 +18,12 @@
 	<c:import url="topo.jsp"></c:import>
 	<div class="container">
 		<div class="page-header">
-			<h1>Inserir Tipo</h1>
+			<h1>Login</h1>
 		</div>
-		<form action="tipos" method="post">
-			<input type="hidden" name="id" value="${tipo.id}"> 
-			Nome:<input type="text" name="nome" value="${tipo.nome}" /><br> 
-			Descricao:<input type="text" name="descricao" value="${tipo.descricao}" /><br> 
-			<input type="submit" value="Salvar" />
+		<form action="login" method="post">
+			Usuario:<input type="text" name="usuario"  /><br> 
+			Senha:<input type="password" name="senha"  /><br> 
+			<input type="submit" value="Entrar" />
 
 		</form>
 	</div>

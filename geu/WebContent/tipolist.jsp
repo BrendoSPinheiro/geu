@@ -25,13 +25,15 @@
 <tr>
 <th> Nome </th>
 <th> Descricao </th>
+<th> Exluir </th>
  
 </tr>
 
 <c:forEach var="e" items="${lista}">
 <tr>
- <td> ${e.nome} </td>
+ <td><a href="/geu/tipos?q=editar&id=${e.id}"> ${e.nome} </a></td>
  <td> ${e.descricao} </td>
+  <td> <a href="/geu/tipos?q=excluir&id=${e.id}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a> </td>
  
 <tr>
 </c:forEach>

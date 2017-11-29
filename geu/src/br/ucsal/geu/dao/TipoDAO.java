@@ -80,6 +80,38 @@ public class TipoDAO {
 	
 	
 	
+	public void delete(int id) {
+			PreparedStatement ps;
+			try {
+				ps = conexao.getConnection().prepareStatement("delete from tipos where id=?");
+				ps.setInt(1, id);
+				ps.execute();
+				ps.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+	}
+	
+	
+	public void update(Tipo tipo) {
+		try {
+			
+			PreparedStatement ps = conexao.getConnection()
+					.prepareStatement("update tipos set nome=?,descricao = ? where id =?;");
+			ps.setString(1, tipo.getNome());
+			ps.setString(2, tipo.getDescricao());
+			ps.setInt(3, tipo.getId());
+			ps.execute();
+			ps.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+	
 
 
 }
