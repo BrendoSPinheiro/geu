@@ -18,7 +18,7 @@
 <c:import url="topo.jsp"></c:import>
 <div class="container">
 <div class="page-header">
-<h1> <img alt="" src="/geu/img/logo-nova-ucsal.png" /> GEU </h1>
+<h1 id="titulo"> <img alt="" src="/geu/img/logo-nova-ucsal.png" /> GEU </h1>
 </div>
 <p class="lead">
 A Universidade Católica do Salvador (UCSal) possui uma estrutura física de com diversos espaços disponíveis aos alunos, desde laboratórios de Informática até auditórios. E o gerenciamento desses espaços fica comprometido pela distribuição das atividades de reserva e solicitação, principalmente devido à dificuldade de comunicação entre os administradores de turnos diferentes e áreas diferentes. É notória a necessidade de um sistema para auxiliar no gerenciamento dessas tarefas.

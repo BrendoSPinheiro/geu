@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.5">
@@ -8,10 +10,24 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_144">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/brendosp/.m2/repository/org/seleniumhq/selenium/selenium-server/3.141.59/selenium-server-3.141.59.jar"/>
+	<classpathentry kind="lib" path="/home/brendosp/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar"/>
+	<classpathentry kind="lib" path="/home/brendosp/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar"/>
+	<classpathentry kind="lib" path="/home/brendosp/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar"/>
+	<classpathentry kind="lib" path="/home/brendosp/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar"/>
+	<classpathentry kind="lib" path="/home/brendosp/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar"/>
+	<classpathentry kind="lib" path="/home/brendosp/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar"/>
+	<classpathentry kind="lib" path="/home/brendosp/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar"/>
+	<classpathentry kind="lib" path="/home/brendosp/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59-sources.jar"/>
+	<classpathentry kind="lib" path="/home/brendosp/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar"/>
+	<classpathentry kind="lib" path="/home/brendosp/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar"/>
+	<classpathentry kind="lib" path="/home/brendosp/.m2/repository/junit/junit/4.12/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="/home/brendosp/.m2/repository/org/jbehave/jbehave-core/4.3.5/jbehave-core-4.3.5.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

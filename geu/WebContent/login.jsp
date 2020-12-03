@@ -21,9 +21,9 @@
 			<h1>Login</h1>
 		</div>
 		<form action="login" method="post">
-			Usuario:<input type="text" name="usuario"  /><br> 
-			Senha:<input type="password" name="senha"  /><br> 
-			<input type="submit" value="Entrar" />
+			Usuario:<input type="text" id="user" name="usuario"  /><br> 
+			Senha:<input type="password" id="pass" name="senha"  /><br> 
+			<input type="submit" id="login" value="Entrar" />
 
 		</form>
 	</div>
